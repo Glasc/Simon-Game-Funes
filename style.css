@@ -1,0 +1,71 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+body {
+  font-family: 'Lato';
+  display: grid;
+  align-items: center;
+  background-color: #212121;
+  height: 100vh;
+}
+
+.wrapper {
+  display: grid;
+  justify-items: end;
+  grid-gap: 3em;
+  grid-template-columns: 1fr 1fr;
+  align-self: start;
+}
+
+.wrapper * {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+.btn-red {
+  background-color: #f44336;
+  justify-self: start;
+}
+.btn-yellow {
+  background-color: #ffeb3b;
+}
+.btn-blue {
+  background-color: #2196f3;
+  justify-self: start;
+}
+
+.pointer-none{ 
+  pointer-events: none;
+}
+
+.animate {
+  animation: floating 1200ms;
+}
+
+.pressed {
+  animation: pressed 200ms;
+}
+/* animations */
+
+/* animation: floating 4000ms infinite; */
+
+@keyframes pressed {
+  from {
+  }
+  to {
+    border: 5px solid whitesmoke;
+  }
+}
+
+@keyframes floating {
+  from {
+    filter: brightness(1%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
