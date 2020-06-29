@@ -85,8 +85,7 @@ buttons.forEach(currBtn => currBtn.addEventListener('click', (e) => {
       h1.innerHTML = 'Press A Key To Start.'
     }, 2500)
   }
-}
-))
+}))
 
 document.addEventListener('keyup', () => {
   if (!playingGame) {
@@ -118,13 +117,27 @@ function addPointer() {
 }
 
 function animateBtn(btn) {
+
   btn.animate(
     [{
-      border: '5px solid whitesmoke'
-    }, ], {
+        border: '0px solid whitesmoke'
+      },
+      {
+        border: '5px solid whitesmoke'
+      }
+    ], {
       duration: 300
     }
   )
+  // .animate([
+  //   // keyframes
+  //   { transform: 'translateY(0px)' }, 
+  //   { transform: 'translateY(-300px)' }
+  // ], { 
+  //   // timing options
+  //   duration: 1000,
+  //   iterations: Infinity
+  // });
 }
 
 function printRound() {
